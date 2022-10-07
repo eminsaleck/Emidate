@@ -42,7 +42,7 @@ class TabBarController: UITabBarController {
         self.view.addSubview(customTabBar)
 
         NSLayoutConstraint.activate([
-            self.customTabBar.leadingAnchor.constraint(equalTo: tabBar.leadingAnchor),
+            self.customTabBar.leadingAnchor.constraint(equalTo: tabBar.leadingAnchor, constant: 7),
             self.customTabBar.trailingAnchor.constraint(equalTo: tabBar.trailingAnchor),
             self.customTabBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5),
             self.customTabBar.heightAnchor.constraint(equalToConstant: tabBarHeight),

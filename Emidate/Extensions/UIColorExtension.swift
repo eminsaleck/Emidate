@@ -21,4 +21,8 @@ extension UIColor {
     static var chatColor: UIColor {
         #colorLiteral(red: 0.09101281315, green: 0.1425964832, blue: 0.1926836967, alpha: 1)
     }
+    static var whiteApple: UIColor {
+        #colorLiteral(red: 0.968627451, green: 0.9725490196, blue: 0.9921568627, alpha: 1)
+    }
+   
 }

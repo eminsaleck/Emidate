@@ -14,9 +14,12 @@ class ChatCell: UICollectionViewListCell {
     let imageView = UIImageView()
     let name = UILabel()
     let lastMessage = UILabel()
+    let timeLabel = UILabel()
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setupFont()
         backgroundColor = UIColor(white: 1, alpha: 1)
        
         setupElements()
@@ -29,13 +32,20 @@ class ChatCell: UICollectionViewListCell {
         name.translatesAutoresizingMaskIntoConstraints = false
         lastMessage.translatesAutoresizingMaskIntoConstraints = false
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        timeLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     
     func configure(with chat: Chat) {
         name.text = chat.name
+        timeLabel.text = chat.time
         lastMessage.text = chat.lastMessage
         imageView.image = UIImage(named: chat.image)
         
+    }
+    func setupFont(){
+        name.font = UIFont.boldSystemFont(ofSize: 16)
+        lastMessage.font = UIFont.monospacedDigitSystemFont(ofSize: 15, weight: .light)
+        timeLabel.font = UIFont.monospacedDigitSystemFont(ofSize: 12, weight: .thin)
     }
 
     required init?(coder: NSCoder) {
@@ -44,30 +54,58 @@ class ChatCell: UICollectionViewListCell {
 }
 
 extension ChatCell {
+    
+    func createLayer() -> CAShapeLayer{
+        
+        let notificationLayer = CAShapeLayer()
+        notificationLayer.path = UIBezierPath(roundedRect: CGRect(x: 320, y: 35, width: 10, height: 10), cornerRadius: 5).cgPath
+        notificationLayer.fillColor = UIColor.tabBarItemAccent.cgColor
+        
+        notificationLayer.opacity = 1
+
+        let contactRect = CGRect(x: 320, y: 36, width: 10, height: 10)
+        notificationLayer.shadowPath = UIBezierPath(ovalIn: contactRect).cgPath
+        notificationLayer.shadowRadius = 10
+        notificationLayer.shadowColor = UIColor.tabBarItemLight.cgColor
+        notificationLayer.shadowOpacity = 1
+        
+        return notificationLayer
+    }
+    
     func setupConstraints() {
 
     
         self.layer.cornerRadius = 10
       
         self.clipsToBounds = true
+        
         imageView.layoutIfNeeded()
         imageView.layer.masksToBounds = true
-        imageView.layer.cornerRadius = imageView.bounds.width / 2
+        imageView.layer.cornerRadius = 31
+        
+        contentView.layer.addSublayer(createLayer())
         
         addSubview(imageView)
         addSubview(name)
         addSubview(lastMessage)
+        addSubview(timeLabel)
+        
         
         NSLayoutConstraint.activate([imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
                                      imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-                                     imageView.widthAnchor.constraint(equalToConstant: 78),
-                                     imageView.heightAnchor.constraint(equalToConstant: 78),
+                                     imageView.widthAnchor.constraint(equalToConstant: 62),
+                                     imageView.heightAnchor.constraint(equalToConstant: 62),
                                      
                                      name.topAnchor.constraint(equalTo: topAnchor, constant: 10),
                                      name.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 16),
                                      
                                      lastMessage.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 10),
-                                     lastMessage.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 16)
+                                     lastMessage.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 16),
+                                     
+                                     timeLabel.topAnchor.constraint(equalTo: name.centerYAnchor, constant: -9),
+                                     timeLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8)
+                                     
+                                     
         ])
 
 

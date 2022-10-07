@@ -116,7 +116,7 @@ class TabMenu: UIView {
         borderLayer.path = UIBezierPath(roundedRect: CGRect(x: 10, y: 0, width: borderWidth, height: 45), cornerRadius: 10).cgPath
         borderLayer.fillColor = UIColor.tabBarItemAccent.cgColor
         borderLayer.name = "active border"
-        borderLayer.opacity = 1
+        borderLayer.opacity = 0.8
         borderLayer.zPosition = -1
         
         

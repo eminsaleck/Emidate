@@ -64,13 +64,13 @@ class ChatController: UIViewController {
     }
     
     func createMatchesSection() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.75),
-                                              heightDimension: .fractionalHeight(0.75))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                              heightDimension: .fractionalHeight(1.2))
         let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
-        layoutItem.contentInsets = NSDirectionalEdgeInsets.init(top: 0, leading: 8, bottom: 0, trailing: 8)
+        layoutItem.contentInsets = NSDirectionalEdgeInsets.init(top: 0, leading: 3, bottom: 0, trailing: 3)
         
         
-        let layoutGroupSize = NSCollectionLayoutSize(widthDimension: .estimated(104),
+        let layoutGroupSize = NSCollectionLayoutSize(widthDimension: .estimated(85),
                                                      heightDimension: .estimated(88))
         let layoutGroup = NSCollectionLayoutGroup.horizontal(layoutSize: layoutGroupSize, subitems: [layoutItem])
         
@@ -85,7 +85,7 @@ class ChatController: UIViewController {
             alignment: .top)
         
         let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
-        layoutSection.contentInsets = NSDirectionalEdgeInsets.init(top: 8, leading: 20, bottom: 25, trailing: 12)
+        layoutSection.contentInsets = NSDirectionalEdgeInsets.init(top: 8, leading: 20, bottom: 0, trailing: 12)
         layoutSection.orthogonalScrollingBehavior = .continuous
         
         layoutSection.boundarySupplementaryItems = [sectionHeader]
@@ -93,7 +93,7 @@ class ChatController: UIViewController {
     }
     
     func createChatSection() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(75))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(80))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets.init(top: 0, leading: 0, bottom: 8, trailing: 0)
         
@@ -110,7 +110,7 @@ class ChatController: UIViewController {
             alignment: .top)
         
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets.init(top: 8, leading: 20, bottom: 50, trailing: 20)
+        section.contentInsets = NSDirectionalEdgeInsets.init(top: 8, leading: 20, bottom: 34, trailing: 20)
         section.boundarySupplementaryItems = [sectionHeader]
         return section
     }

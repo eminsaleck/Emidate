@@ -23,6 +23,9 @@
 		AC5069DE28F039D100DA137D /* MatchesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069DD28F039D100DA137D /* MatchesCell.swift */; };
 		AC5069E028F039F000DA137D /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069DF28F039F000DA137D /* ChatCell.swift */; };
 		AC5069E528F04ED500DA137D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069E428F04ED500DA137D /* HeaderView.swift */; };
+		AC5069EB28F0698100DA137D /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069EA28F0698100DA137D /* Profile.swift */; };
+		AC5069ED28F069AD00DA137D /* AccountSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069EC28F069AD00DA137D /* AccountSection.swift */; };
+		AC5069EF28F06A2100DA137D /* modelForProfile.json in Sources */ = {isa = PBXBuildFile; fileRef = AC5069EE28F06A2100DA137D /* modelForProfile.json */; };
 		ACB31A9428EB1FFB001DC999 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB31A9328EB1FFB001DC999 /* AppDelegate.swift */; };
 		ACB31A9628EB1FFB001DC999 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB31A9528EB1FFB001DC999 /* SceneDelegate.swift */; };
 		ACB31A9828EB1FFB001DC999 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB31A9728EB1FFB001DC999 /* FeedController.swift */; };
@@ -66,6 +69,9 @@
 		AC5069DD28F039D100DA137D /* MatchesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCell.swift; sourceTree = "<group>"; };
 		AC5069DF28F039F000DA137D /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		AC5069E428F04ED500DA137D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		AC5069EA28F0698100DA137D /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		AC5069EC28F069AD00DA137D /* AccountSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSection.swift; sourceTree = "<group>"; };
+		AC5069EE28F06A2100DA137D /* modelForProfile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = modelForProfile.json; sourceTree = "<group>"; };
 		ACB31A9028EB1FFB001DC999 /* Emidate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emidate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB31A9328EB1FFB001DC999 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACB31A9528EB1FFB001DC999 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +183,8 @@
 		AC5069C228F0104F00DA137D /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				AC5069E928F0697100DA137D /* View */,
+				AC5069E828F0696D00DA137D /* Model */,
 				AC5069C728F010D800DA137D /* Controller */,
 			);
 			path = Account;
@@ -263,6 +271,7 @@
 				ACB31A9C28EB1FFC001DC999 /* Assets.xcassets */,
 				ACB31A9E28EB1FFC001DC999 /* LaunchScreen.storyboard */,
 				AC5069D728F015D500DA137D /* model.json */,
+				AC5069EE28F06A2100DA137D /* modelForProfile.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -274,6 +283,22 @@
 				AC5069DF28F039F000DA137D /* ChatCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		AC5069E828F0696D00DA137D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC5069EA28F0698100DA137D /* Profile.swift */,
+				AC5069EC28F069AD00DA137D /* AccountSection.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC5069E928F0697100DA137D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		ACB31A8728EB1FFB001DC999 = {
@@ -466,6 +491,7 @@
 				AC5069DE28F039D100DA137D /* MatchesCell.swift in Sources */,
 				AC5069D328F0149500DA137D /* Chat.swift in Sources */,
 				AC5069E028F039F000DA137D /* ChatCell.swift in Sources */,
+				AC5069ED28F069AD00DA137D /* AccountSection.swift in Sources */,
 				ACB31A9828EB1FFB001DC999 /* FeedController.swift in Sources */,
 				AC5069AF28EFF63700DA137D /* MainController.swift in Sources */,
 				ACB31A9428EB1FFB001DC999 /* AppDelegate.swift in Sources */,
@@ -474,7 +500,9 @@
 				AC5069AB28EFF5FA00DA137D /* TopAcountsController.swift in Sources */,
 				AC5069B328EFF67800DA137D /* AccountController.swift in Sources */,
 				AC5069A628EFF4F900DA137D /* TabBarController.swift in Sources */,
+				AC5069EF28F06A2100DA137D /* modelForProfile.json in Sources */,
 				AC5069B528EFF8E000DA137D /* TabItem.swift in Sources */,
+				AC5069EB28F0698100DA137D /* Profile.swift in Sources */,
 				AC5069D128F0146600DA137D /* Section.swift in Sources */,
 				ACB31A9628EB1FFB001DC999 /* SceneDelegate.swift in Sources */,
 				AC5069B728EFFA9C00DA137D /* TabMenu.swift in Sources */,
