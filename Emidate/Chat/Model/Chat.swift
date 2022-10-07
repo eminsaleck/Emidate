@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct Chat: Decodable, Hashable {
-    let friendName: String
-    let friendImage: String
+    let name: String
+    let image: String
     let lastMessage: String
 }

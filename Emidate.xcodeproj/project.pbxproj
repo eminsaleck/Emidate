@@ -20,6 +20,9 @@
 		AC5069D628F014F300DA137D /* Bundle + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069D528F014F300DA137D /* Bundle + Extension.swift */; };
 		AC5069D828F015D500DA137D /* model.json in Sources */ = {isa = PBXBuildFile; fileRef = AC5069D728F015D500DA137D /* model.json */; };
 		AC5069D928F01BC600DA137D /* model.json in Resources */ = {isa = PBXBuildFile; fileRef = AC5069D728F015D500DA137D /* model.json */; };
+		AC5069DE28F039D100DA137D /* MatchesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069DD28F039D100DA137D /* MatchesCell.swift */; };
+		AC5069E028F039F000DA137D /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069DF28F039F000DA137D /* ChatCell.swift */; };
+		AC5069E528F04ED500DA137D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069E428F04ED500DA137D /* HeaderView.swift */; };
 		ACB31A9428EB1FFB001DC999 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB31A9328EB1FFB001DC999 /* AppDelegate.swift */; };
 		ACB31A9628EB1FFB001DC999 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB31A9528EB1FFB001DC999 /* SceneDelegate.swift */; };
 		ACB31A9828EB1FFB001DC999 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB31A9728EB1FFB001DC999 /* FeedController.swift */; };
@@ -60,6 +63,9 @@
 		AC5069D228F0149500DA137D /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		AC5069D528F014F300DA137D /* Bundle + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle + Extension.swift"; sourceTree = "<group>"; };
 		AC5069D728F015D500DA137D /* model.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = model.json; sourceTree = "<group>"; };
+		AC5069DD28F039D100DA137D /* MatchesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCell.swift; sourceTree = "<group>"; };
+		AC5069DF28F039F000DA137D /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		AC5069E428F04ED500DA137D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		ACB31A9028EB1FFB001DC999 /* Emidate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emidate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB31A9328EB1FFB001DC999 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACB31A9528EB1FFB001DC999 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -227,6 +233,8 @@
 		AC5069CB28F0121E00DA137D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AC5069DC28F0399500DA137D /* Cells */,
+				AC5069E428F04ED500DA137D /* HeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -257,6 +265,15 @@
 				AC5069D728F015D500DA137D /* model.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		AC5069DC28F0399500DA137D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AC5069DD28F039D100DA137D /* MatchesCell.swift */,
+				AC5069DF28F039F000DA137D /* ChatCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		ACB31A8728EB1FFB001DC999 = {
@@ -445,7 +462,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC5069D828F015D500DA137D /* model.json in Sources */,
+				AC5069E528F04ED500DA137D /* HeaderView.swift in Sources */,
+				AC5069DE28F039D100DA137D /* MatchesCell.swift in Sources */,
 				AC5069D328F0149500DA137D /* Chat.swift in Sources */,
+				AC5069E028F039F000DA137D /* ChatCell.swift in Sources */,
 				ACB31A9828EB1FFB001DC999 /* FeedController.swift in Sources */,
 				AC5069AF28EFF63700DA137D /* MainController.swift in Sources */,
 				ACB31A9428EB1FFB001DC999 /* AppDelegate.swift in Sources */,
