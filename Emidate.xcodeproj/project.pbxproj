@@ -24,8 +24,9 @@
 		AC5069E028F039F000DA137D /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069DF28F039F000DA137D /* ChatCell.swift */; };
 		AC5069E528F04ED500DA137D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069E428F04ED500DA137D /* HeaderView.swift */; };
 		AC5069EB28F0698100DA137D /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069EA28F0698100DA137D /* Profile.swift */; };
-		AC5069ED28F069AD00DA137D /* AccountSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069EC28F069AD00DA137D /* AccountSection.swift */; };
 		AC5069EF28F06A2100DA137D /* modelForProfile.json in Sources */ = {isa = PBXBuildFile; fileRef = AC5069EE28F06A2100DA137D /* modelForProfile.json */; };
+		AC5069F228F074AF00DA137D /* ProfileSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069F128F074AF00DA137D /* ProfileSection.swift */; };
+		AC5069F728F0758000DA137D /* Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5069F628F0758000DA137D /* Screen.png */; };
 		ACB31A9428EB1FFB001DC999 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB31A9328EB1FFB001DC999 /* AppDelegate.swift */; };
 		ACB31A9628EB1FFB001DC999 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB31A9528EB1FFB001DC999 /* SceneDelegate.swift */; };
 		ACB31A9828EB1FFB001DC999 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB31A9728EB1FFB001DC999 /* FeedController.swift */; };
@@ -70,8 +71,9 @@
 		AC5069DF28F039F000DA137D /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		AC5069E428F04ED500DA137D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		AC5069EA28F0698100DA137D /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		AC5069EC28F069AD00DA137D /* AccountSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSection.swift; sourceTree = "<group>"; };
 		AC5069EE28F06A2100DA137D /* modelForProfile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = modelForProfile.json; sourceTree = "<group>"; };
+		AC5069F128F074AF00DA137D /* ProfileSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSection.swift; sourceTree = "<group>"; };
+		AC5069F628F0758000DA137D /* Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen.png; sourceTree = "<group>"; };
 		ACB31A9028EB1FFB001DC999 /* Emidate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emidate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB31A9328EB1FFB001DC999 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACB31A9528EB1FFB001DC999 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -289,7 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				AC5069EA28F0698100DA137D /* Profile.swift */,
-				AC5069EC28F069AD00DA137D /* AccountSection.swift */,
+				AC5069F128F074AF00DA137D /* ProfileSection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -301,9 +303,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		AC5069F328F0754B00DA137D /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				AC5069F628F0758000DA137D /* Screen.png */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		ACB31A8728EB1FFB001DC999 = {
 			isa = PBXGroup;
 			children = (
+				AC5069F328F0754B00DA137D /* Screen */,
 				ACB31A9228EB1FFB001DC999 /* Emidate */,
 				ACB31AA928EB1FFC001DC999 /* EmidateTests */,
 				ACB31AB328EB1FFC001DC999 /* EmidateUITests */,
@@ -460,6 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC5069D928F01BC600DA137D /* model.json in Resources */,
+				AC5069F728F0758000DA137D /* Screen.png in Resources */,
 				ACB31AA028EB1FFC001DC999 /* LaunchScreen.storyboard in Resources */,
 				ACB31A9D28EB1FFC001DC999 /* Assets.xcassets in Resources */,
 			);
@@ -491,12 +503,12 @@
 				AC5069DE28F039D100DA137D /* MatchesCell.swift in Sources */,
 				AC5069D328F0149500DA137D /* Chat.swift in Sources */,
 				AC5069E028F039F000DA137D /* ChatCell.swift in Sources */,
-				AC5069ED28F069AD00DA137D /* AccountSection.swift in Sources */,
 				ACB31A9828EB1FFB001DC999 /* FeedController.swift in Sources */,
 				AC5069AF28EFF63700DA137D /* MainController.swift in Sources */,
 				ACB31A9428EB1FFB001DC999 /* AppDelegate.swift in Sources */,
 				AC5069B128EFF65400DA137D /* ChatController.swift in Sources */,
 				AC5069A928EFF56900DA137D /* UIColorExtension.swift in Sources */,
+				AC5069F228F074AF00DA137D /* ProfileSection.swift in Sources */,
 				AC5069AB28EFF5FA00DA137D /* TopAcountsController.swift in Sources */,
 				AC5069B328EFF67800DA137D /* AccountController.swift in Sources */,
 				AC5069A628EFF4F900DA137D /* TabBarController.swift in Sources */,
