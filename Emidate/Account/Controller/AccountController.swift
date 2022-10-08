@@ -8,237 +8,94 @@
 import UIKit
 
 class AccountController: UIViewController {
-    
-    static let sectionHeaderElementKind = "section-headerForHeader-element-kind"
-    
-    
-    var dataSource: UICollectionViewDiffableDataSource<ProfileSection, Profile>!  = nil
     let sections = Bundle.main.decode([ProfileSection].self, from: "modelProfile.json")
+
     
+    private lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.backgroundColor = .whiteApple
+        scrollView.frame = view.bounds
+        scrollView.contentSize = contentSize
+        return scrollView
+    }()
     
-    var collectionView: UICollectionView!
+    private lazy var contentView: UIView = {
+        let contentView = UIView()
+        contentView.backgroundColor = .whiteApple
+        contentView.frame.size = contentSize
+        return contentView
+    }()
     
+    private let stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.alignment = .center
+        stackView.spacing = 5
+        return stackView
+    }()
     
+    private var contentSize: CGSize{
+        CGSize(width: view.frame.width, height: view.frame.height + 10)
+    }
+
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .whiteApple
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        contentView.addSubview(stackView)
         
-        
-        setupCollectionView()
-        createDataSource()
-        let snapshot = reloadData()
-        dataSource.apply(snapshot, animatingDifferences: false)
-    }
-    
-    func setupCollectionView() {
-        let cocollectionViewFrame = view.bounds.inset(by: UIEdgeInsets(top: 125, left: 0, bottom: 0, right: 0))
-        self.view.backgroundColor = UIColor.whiteApple
-        collectionView = UICollectionView(frame: cocollectionViewFrame, collectionViewLayout: createLayout())
-        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        collectionView.backgroundColor =   #colorLiteral(red: 0.968627451, green: 0.9725490196, blue: 0.9921568627, alpha: 1)
-        
-        view.addSubview(collectionView)
-        collectionView.register(ProfileCell.self,
-                                forCellWithReuseIdentifier: ProfileCell.reuseId)
-        collectionView.register(SocialsCell.self,
-                                forCellWithReuseIdentifier: SocialsCell.reuseId)
-        collectionView.register(SettingsCell.self,
-                                forCellWithReuseIdentifier: SettingsCell.reuseId)
-        collectionView.register(PhotoCell.self,
-                                forCellWithReuseIdentifier: PhotoCell.reuseId)
-        
-        
-        collectionView.register(
-            HeaderViewForProfile.self,
-            forSupplementaryViewOfKind: AccountController.sectionHeaderElementKind,
-            withReuseIdentifier: HeaderViewForProfile.reuseIdentifier)
+        setupProfileView()
+        setupGeneralView()
+        setupConstraints()
         
     }
     
-    func createLayout() -> UICollectionViewLayout {
-        
-        let layout = UICollectionViewCompositionalLayout { (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
-            let section = self.sections[sectionIndex]
-
-            switch section.type {
-            case "profile":
-                return self.generateProfile()
-                
-            case "settings":
-                return self.generateSettings()
-            case "socials":
-                return self.generateSocials()
-            default:
-                return self.generatePhotos()
-            }
-        }
-        
-        return layout
-    }
+    
 }
 
-//MARK: Layout
-extension AccountController{
-    func generateProfile() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(80))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets.init(top: 0, leading: 0, bottom: 0, trailing: 0)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .estimated(1))
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
-        
-        let headerSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0),
-            heightDimension: .estimated(44))
-        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
-            layoutSize: headerSize,
-            elementKind: AccountController.sectionHeaderElementKind,
-            alignment: .top)
-        
-        let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets.init(top: 8, leading: 20, bottom: 34, trailing: 20)
-        section.boundarySupplementaryItems = [sectionHeader]
-        return section
-    }
-    func generateSettings() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(80))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets.init(top: 0, leading: 0, bottom: 0, trailing: 0)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .estimated(1))
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
-        
-        let headerSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0),
-            heightDimension: .estimated(44))
-        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
-            layoutSize: headerSize,
-            elementKind: AccountController.sectionHeaderElementKind,
-            alignment: .top)
-        
-        let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets.init(top: 8, leading: 20, bottom: 34, trailing: 20)
-        section.boundarySupplementaryItems = [sectionHeader]
-        return section
-    }
-    func generateSocials() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(80))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets.init(top: 0, leading: 0, bottom: 0, trailing: 0)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .estimated(1))
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
-        
-        let headerSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0),
-            heightDimension: .estimated(44))
-        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
-            layoutSize: headerSize,
-            elementKind: AccountController.sectionHeaderElementKind,
-            alignment: .top)
-        
-        let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets.init(top: 8, leading: 20, bottom: 34, trailing: 20)
-        section.boundarySupplementaryItems = [sectionHeader]
-        return section
-    }
-    func generatePhotos() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(80))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets.init(top: 0, leading: 0, bottom: 0, trailing: 0)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .estimated(1))
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
-        
-        let headerSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0),
-            heightDimension: .estimated(44))
-        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
-            layoutSize: headerSize,
-            elementKind: AccountController.sectionHeaderElementKind,
-            alignment: .top)
-        
-        let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets.init(top: 8, leading: 20, bottom: 34, trailing: 20)
-        section.boundarySupplementaryItems = [sectionHeader]
-        return section
-    }
-
-}
-//MARK: DATASOURCE
 extension AccountController{
     
-    func createDataSource() {
-        dataSource = UICollectionViewDiffableDataSource<ProfileSection, Profile>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, items) -> UICollectionViewCell? in
-
-            switch self.sections[indexPath.section].type {
-            case "profile":
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileCell.reuseId, for: indexPath) as! ProfileCell
-                cell.setup(items)
-                print("cell - 1")
-                return cell
-            case "settings":
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SettingsCell.reuseId, for: indexPath) as! SettingsCell
-                cell.setup(items)
-                print("cell - 2")
-
-                return cell
-            case "socials":
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SocialsCell.reuseId, for: indexPath) as! SocialsCell
-                cell.setup(items)
-                print("cell - 3")
-
-                return cell
-            default:
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.reuseId, for: indexPath) as! PhotoCell
-
-                cell.setup(items)
-                return cell
-            }
-        })
+    private func setupProfileView(){
+        let view = ProfileView()
+        view.setup(sections[0].items[0])
+        stackView.addArrangedSubview(view)
         
-        dataSource.supplementaryViewProvider = { (
-            collectionView: UICollectionView,
-            kind: String,
-            indexPath: IndexPath) -> UICollectionReusableView? in
-            
-            guard let supplementaryView = collectionView.dequeueReusableSupplementaryView(
-                ofKind: kind,
-                withReuseIdentifier: HeaderViewForProfile.reuseIdentifier,
-                for: indexPath) as? HeaderViewForProfile else { fatalError("Cannot create header view") }
-
-            supplementaryView.label.text = self.sections[indexPath.section].title
-            return supplementaryView
-        }
-        let snapshot = reloadData()
-        dataSource.apply(snapshot, animatingDifferences: false)
+        NSLayoutConstraint.activate([
+            view.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height / 2.3),
+            view.widthAnchor.constraint(equalToConstant:  UIScreen.main.bounds.width)
+        ])
     }
     
-    func reloadData() -> NSDiffableDataSourceSnapshot<ProfileSection, Profile>  {
-        var snapshot = NSDiffableDataSourceSnapshot<ProfileSection, Profile>()
-        snapshot.appendSections(sections)
-        
-        for section in sections {
-            snapshot.appendItems(section.items, toSection: section)
-
-        }
-        
-        
-        dataSource?.apply(snapshot)
-        return snapshot
+    private func setupGeneralView(){
+        let view = UIView()
+        stackView.addArrangedSubview(view)
+        view.backgroundColor = .tabBarItemAccent
+        view.layer.cornerRadius = 30
+        NSLayoutConstraint.activate([
+            view.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height / 1.6),
+            view.widthAnchor.constraint(equalToConstant:  UIScreen.main.bounds.width)
+        ])
     }
     
+    private func setupConstraints(){
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            scrollView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            scrollView.rightAnchor.constraint(equalTo: view.rightAnchor),
+
+            stackView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            stackView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
+            stackView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
+
+        ])
+
+    }
 }
-
-
-
-//
-//
-//
-//
-
-
 

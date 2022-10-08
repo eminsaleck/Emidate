@@ -20,11 +20,15 @@ class ProfileCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
       fatalError()
     }
-    func configure(){
-        self.backgroundColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
-    }
+  
     func setup(_ item: Profile) {
         
+    }
+    
+    
+    
+    func configure(){
+        self.backgroundColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
     }
     
 }

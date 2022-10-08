@@ -30,7 +30,7 @@ extension HeaderViewForProfile {
     
   func configure() {
     backgroundColor = .systemBackground
-      self.backgroundColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
+      self.backgroundColor = UIColor.whiteApple
     addSubview(label)
     label.translatesAutoresizingMaskIntoConstraints = false
     label.adjustsFontForContentSizeCategory = true

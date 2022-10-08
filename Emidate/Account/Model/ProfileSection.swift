@@ -7,14 +7,9 @@
 
 import UIKit
 
-class ProfileSection: UIView {
+struct ProfileSection: Decodable, Hashable {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+    let type: String
+    let title: String
+    let items: [Profile]
 }
