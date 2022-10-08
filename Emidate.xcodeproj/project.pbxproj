@@ -38,8 +38,8 @@
 		ACB31AAB28EB1FFC001DC999 /* EmidateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB31AAA28EB1FFC001DC999 /* EmidateTests.swift */; };
 		ACB31AB528EB1FFC001DC999 /* EmidateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB31AB428EB1FFC001DC999 /* EmidateUITests.swift */; };
 		ACB31AB728EB1FFC001DC999 /* EmidateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB31AB628EB1FFC001DC999 /* EmidateUITestsLaunchTests.swift */; };
-		ACCE256328F21552007A08EC /* Screen1.png in Resources */ = {isa = PBXBuildFile; fileRef = ACCE256228F21552007A08EC /* Screen1.png */; };
-		ACCE256528F2158E007A08EC /* Screen2.png in Resources */ = {isa = PBXBuildFile; fileRef = ACCE256428F2158E007A08EC /* Screen2.png */; };
+		ACCE256328F21552007A08EC /* Screen0.png in Resources */ = {isa = PBXBuildFile; fileRef = ACCE256228F21552007A08EC /* Screen0.png */; };
+		ACCE256528F2158E007A08EC /* Screen1.png in Resources */ = {isa = PBXBuildFile; fileRef = ACCE256428F2158E007A08EC /* Screen1.png */; };
 		ACFF978F28F1AEBC00C80FBE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFF978E28F1AEBC00C80FBE /* ProfileView.swift */; };
 		ACFF979628F1E9DF00C80FBE /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFF979528F1E9DF00C80FBE /* PhotoViewController.swift */; };
 		ACFF979828F1F34A00C80FBE /* Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFF979728F1F34A00C80FBE /* Anchor.swift */; };
@@ -99,8 +99,8 @@
 		ACB31AB028EB1FFC001DC999 /* EmidateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmidateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB31AB428EB1FFC001DC999 /* EmidateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmidateUITests.swift; sourceTree = "<group>"; };
 		ACB31AB628EB1FFC001DC999 /* EmidateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmidateUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		ACCE256228F21552007A08EC /* Screen1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen1.png; sourceTree = "<group>"; };
-		ACCE256428F2158E007A08EC /* Screen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen2.png; sourceTree = "<group>"; };
+		ACCE256228F21552007A08EC /* Screen0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen0.png; sourceTree = "<group>"; };
+		ACCE256428F2158E007A08EC /* Screen1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen1.png; sourceTree = "<group>"; };
 		ACFF978E28F1AEBC00C80FBE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		ACFF979528F1E9DF00C80FBE /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		ACFF979728F1F34A00C80FBE /* Anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anchor.swift; sourceTree = "<group>"; };
@@ -341,8 +341,8 @@
 		AC5069F328F0754B00DA137D /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				ACCE256228F21552007A08EC /* Screen1.png */,
-				ACCE256428F2158E007A08EC /* Screen2.png */,
+				ACCE256228F21552007A08EC /* Screen0.png */,
+				ACCE256428F2158E007A08EC /* Screen1.png */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -507,10 +507,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACFF97C528F2069600C80FBE /* modelPhoto.json in Resources */,
-				ACCE256528F2158E007A08EC /* Screen2.png in Resources */,
+				ACCE256528F2158E007A08EC /* Screen1.png in Resources */,
 				AC3BB79828F18627004C343D /* modelProfile.json in Resources */,
 				AC5069D928F01BC600DA137D /* model.json in Resources */,
-				ACCE256328F21552007A08EC /* Screen1.png in Resources */,
+				ACCE256328F21552007A08EC /* Screen0.png in Resources */,
 				ACB31AA028EB1FFC001DC999 /* LaunchScreen.storyboard in Resources */,
 				ACB31A9D28EB1FFC001DC999 /* Assets.xcassets in Resources */,
 			);
