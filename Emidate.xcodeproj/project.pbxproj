@@ -40,6 +40,10 @@
 		ACB31AB528EB1FFC001DC999 /* EmidateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB31AB428EB1FFC001DC999 /* EmidateUITests.swift */; };
 		ACB31AB728EB1FFC001DC999 /* EmidateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB31AB628EB1FFC001DC999 /* EmidateUITestsLaunchTests.swift */; };
 		ACFF978F28F1AEBC00C80FBE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFF978E28F1AEBC00C80FBE /* ProfileView.swift */; };
+		ACFF979628F1E9DF00C80FBE /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFF979528F1E9DF00C80FBE /* PhotoViewController.swift */; };
+		ACFF979828F1F34A00C80FBE /* Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFF979728F1F34A00C80FBE /* Anchor.swift */; };
+		ACFF97C428F2062C00C80FBE /* modelPhoto.json in Sources */ = {isa = PBXBuildFile; fileRef = ACFF97C328F2062C00C80FBE /* modelPhoto.json */; };
+		ACFF97C528F2069600C80FBE /* modelPhoto.json in Resources */ = {isa = PBXBuildFile; fileRef = ACFF97C328F2062C00C80FBE /* modelPhoto.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +100,9 @@
 		ACB31AB428EB1FFC001DC999 /* EmidateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmidateUITests.swift; sourceTree = "<group>"; };
 		ACB31AB628EB1FFC001DC999 /* EmidateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmidateUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		ACFF978E28F1AEBC00C80FBE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		ACFF979528F1E9DF00C80FBE /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		ACFF979728F1F34A00C80FBE /* Anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anchor.swift; sourceTree = "<group>"; };
+		ACFF97C328F2062C00C80FBE /* modelPhoto.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = modelPhoto.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +254,7 @@
 		AC5069C728F010D800DA137D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ACFF979528F1E9DF00C80FBE /* PhotoViewController.swift */,
 				AC5069B228EFF67800DA137D /* AccountController.swift */,
 			);
 			path = Controller;
@@ -283,6 +291,7 @@
 			children = (
 				AC5069A828EFF56900DA137D /* UIColorExtension.swift */,
 				AC5069D528F014F300DA137D /* Bundle + Extension.swift */,
+				ACFF979728F1F34A00C80FBE /* Anchor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -293,6 +302,7 @@
 				ACB31A9C28EB1FFC001DC999 /* Assets.xcassets */,
 				ACB31A9E28EB1FFC001DC999 /* LaunchScreen.storyboard */,
 				AC5069D728F015D500DA137D /* model.json */,
+				ACFF97C328F2062C00C80FBE /* modelPhoto.json */,
 				AC3BB79728F18627004C343D /* modelProfile.json */,
 			);
 			path = Resources;
@@ -493,6 +503,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACFF97C528F2069600C80FBE /* modelPhoto.json in Resources */,
 				AC3BB79828F18627004C343D /* modelProfile.json in Resources */,
 				AC5069D928F01BC600DA137D /* model.json in Resources */,
 				AC5069F728F0758000DA137D /* Screen.png in Resources */,
@@ -526,17 +537,20 @@
 				AC5069D828F015D500DA137D /* model.json in Sources */,
 				AC5069E528F04ED500DA137D /* HeaderView.swift in Sources */,
 				AC5069DE28F039D100DA137D /* MatchesCell.swift in Sources */,
+				ACFF97C428F2062C00C80FBE /* modelPhoto.json in Sources */,
 				AC5069D328F0149500DA137D /* Chat.swift in Sources */,
 				AC3BB79428F16D7E004C343D /* PhotoCell.swift in Sources */,
 				AC5069E028F039F000DA137D /* ChatCell.swift in Sources */,
 				ACFF978F28F1AEBC00C80FBE /* ProfileView.swift in Sources */,
 				ACB31A9828EB1FFB001DC999 /* FeedController.swift in Sources */,
+				ACFF979828F1F34A00C80FBE /* Anchor.swift in Sources */,
 				AC5069AF28EFF63700DA137D /* MainController.swift in Sources */,
 				ACB31A9428EB1FFB001DC999 /* AppDelegate.swift in Sources */,
 				AC5069B128EFF65400DA137D /* ChatController.swift in Sources */,
 				AC5069A928EFF56900DA137D /* UIColorExtension.swift in Sources */,
 				AC5069F228F074AF00DA137D /* ProfileSection.swift in Sources */,
 				AC5069AB28EFF5FA00DA137D /* TopAcountsController.swift in Sources */,
+				ACFF979628F1E9DF00C80FBE /* PhotoViewController.swift in Sources */,
 				AC5069B328EFF67800DA137D /* AccountController.swift in Sources */,
 				AC5069A628EFF4F900DA137D /* TabBarController.swift in Sources */,
 				AC5069B528EFF8E000DA137D /* TabItem.swift in Sources */,

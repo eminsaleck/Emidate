@@ -114,7 +114,7 @@ class TabMenu: UIView {
         
         let borderLayer = CAShapeLayer()
         borderLayer.path = UIBezierPath(roundedRect: CGRect(x: 10, y: 0, width: borderWidth, height: 45), cornerRadius: 10).cgPath
-        borderLayer.fillColor = UIColor.tabBarItemAccent.cgColor
+        borderLayer.fillColor = #colorLiteral(red: 0.2876360416, green: 0.9661642909, blue: 0.7776840329, alpha: 0.821747449)
         borderLayer.name = "active border"
         borderLayer.opacity = 0.8
         borderLayer.zPosition = -1

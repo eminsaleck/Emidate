@@ -7,10 +7,10 @@
 
 import UIKit
 
-
 class ProfileView: UIView {
     var imageView = UIImageView()
     var name = UILabel()
+    
     
     var matches = UILabel()
     var matchesCount = UILabel()
@@ -57,6 +57,7 @@ class ProfileView: UIView {
     }
     
     func configure(){
+        
         locationImage.image = UIImage(named: "location")
         matches.text = "matches"
         likes.text = "likes"
@@ -65,6 +66,8 @@ class ProfileView: UIView {
     }
     
 }
+
+
 extension ProfileView {
     func setupConstraints() {
         self.backgroundColor = #colorLiteral(red: 0.968627451, green: 0.9725490196, blue: 0.9921568627, alpha: 1)
@@ -155,3 +158,5 @@ extension ProfileView {
                                     ])
     }
 }
+
+
