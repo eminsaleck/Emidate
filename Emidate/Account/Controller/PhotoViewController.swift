@@ -68,7 +68,7 @@ class PhotoView : UIView, UICollectionViewDataSource, UICollectionViewDelegate {
 
 
 extension PhotoView{
-   
+    
     func generateLayout() -> UICollectionViewLayout {
 
       let fullPhotoItem = NSCollectionLayoutItem(
