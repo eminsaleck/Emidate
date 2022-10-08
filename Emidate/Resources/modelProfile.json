@@ -1,0 +1,78 @@
+[
+    {
+        "type": "profile",
+        "title": "Profile",
+        "subtitle": "",
+        "items": [
+            {
+                "name": "Boa River",
+                "image": "human1",
+                "location": "How are you?",
+                "matches": "153",
+                "likes": "6453",
+                "bio": "dsagdsagcsa",
+                "about": "Abousf",
+                "settings": "ads",
+                "instagram": "adgc",
+                "spotify": "savgt"
+            }
+        ]
+    },
+    {
+        "type": "settings",
+        "title": "General Info",
+        "subtitle": "",
+        "items": [
+            {
+                "name": "Boagd er",
+                "image": "human2",
+                "location": "How are gou?",
+                "matches": "1531",
+                "likes": "64353",
+                "bio": "dsagdsasgcsa",
+                "about": "Abougsf",
+                "settings": "adgs",
+                "instagram": "adggc",
+                "spotify": "savggt"
+            }
+        ]
+    },
+    {
+        "type": "socials",
+        "title": "Social",
+        "subtitle": "",
+        "items": [
+            {
+                "name": "Boaviver",
+                "image": "human3",
+                "location": "Hxzow are you?",
+                "matches": "1523",
+                "likes": "645213",
+                "bio": "dsagdsagfcacsa",
+                "about": "Aboacausf",
+                "settings": "adsacad",
+                "instagram": "adgcadc",
+                "spotify": "savgadt"
+            }
+        ]
+    },
+    {
+        "type": "photos",
+        "title": "Photos",
+        "subtitle": "",
+        "items": [
+            {
+                "name": "Bviver",
+                "image": "human4",
+                "location": "Hxzow arou?",
+                "matches": "15213",
+                "likes": "6213",
+                "bio": "dfcacsa",
+                "about": "Aboacaaausf",
+                "settings": "adsaxcad",
+                "instagram": "adgvcadc",
+                "spotify": "savgbadt"
+            }
+        ]
+    }
+]

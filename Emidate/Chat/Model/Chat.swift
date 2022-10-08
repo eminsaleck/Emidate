@@ -13,4 +13,5 @@ struct Chat: Decodable, Hashable {
     let image: String
     let lastMessage: String
     let time: String
+    let isNew: String
 }

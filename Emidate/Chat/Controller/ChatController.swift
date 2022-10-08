@@ -16,9 +16,7 @@ class ChatController: UIViewController {
     
     var dataSource: UICollectionViewDiffableDataSource<Section, Chat>!  = nil
     
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = #colorLiteral(red: 0.968627451, green: 0.9725490196, blue: 0.9921568627, alpha: 1)

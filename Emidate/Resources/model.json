@@ -6,33 +6,38 @@
             "items": [
                 {
                     "name": "Bob River",
-                    "image": "human1",
+                    "image": "human12",
                     "lastMessage": "How are you?",
-                    "time": "3:21 PM"
+                    "time": "3:21 PM",
+                    "isNew": ""
                 },
                 {
                     "name": "John Black",
                     "image": "human2",
                     "lastMessage": "Where are you?",
-                    "time": "7:20 PM"
+                    "time": "7:20 PM",
+                    "isNew": ""
                 },
                 {
                     "name": "Misha Red",
                     "image": "human3",
                     "lastMessage": "Who are you?",
-                    "time": "12:00 AM"
+                    "time": "12:00 AM",
+                    "isNew": ""
                 },
                 {
                     "name": "Alex Film",
                     "image": "human4",
                     "lastMessage": "How old are you?",
-                    "time": "00:21 PM"
+                    "time": "00:21 PM",
+                    "isNew": ""
                 },
                 {
                     "name": "Robert Martin",
                     "image": "human5",
                     "lastMessage": "Where are we?",
-                    "time": "5:11 PM"
+                    "time": "5:11 PM",
+                    "isNew": ""
                 }
             ]
         },
@@ -45,31 +50,50 @@
                     "name": "Peter Brown",
                     "image": "human6",
                     "lastMessage": "Are you kidding me?",
-                    "time": "10:21 PM"
+                    "time": "10:21 PM",
+                    "isNew": "true"
                 },
                 {
                     "name": "Sarah White",
                     "image": "human7",
                     "lastMessage": "Are you joking?",
-                    "time": "13:44 PM"
+                    "time": "13:44 PM",
+                    "isNew": "true"
                 },
                 {
                     "name": "Melven Strong",
                     "image": "human8",
                     "lastMessage": "Nice to meet you!",
-                    "time": "6:08 PM"
+                    "time": "6:08 PM",
+                    "isNew": "false"
                 },
                 {
                     "name": "Nike Rose",
                     "image": "human9",
                     "lastMessage": "I miss you",
-                    "time": "3:21 AM"
+                    "time": "3:21 AM",
+                    "isNew": "true"
                 },
                 {
                     "name": "Andrey Velvet",
                     "image": "human10",
                     "lastMessage": "Do you want to dring some cola?",
-                    "time": "21:24 PM"
+                    "time": "21:24 PM",
+                    "isNew": "false"
+                },
+                {
+                    "name": "Veronika Gale",
+                    "image": "human11",
+                    "lastMessage": "What's your birthday date?",
+                    "time": "21:24 PM",
+                    "isNew": "false"
+                },
+                {
+                    "name": "Anjelina Jolie",
+                    "image": "human12",
+                    "lastMessage": "No, I've got a lot of kids",
+                    "time": "21:24 PM",
+                    "isNew": "true"
                 }
             ]
         }

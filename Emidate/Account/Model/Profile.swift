@@ -8,11 +8,20 @@
 import Foundation
 import UIKit
 
-struct Profile: Decodable, Hashable {
+struct Profile: Decodable, Hashable  {
+    
     let name: String
     let image: String
     let location: String
-    let time: String
     let matches: String
     let likes: String
+    let bio: String
+    
+    let about: String
+    let settings: String
+    
+    let instagram: String
+    let spotify: String
+    
+   // let photos: [String]
 }

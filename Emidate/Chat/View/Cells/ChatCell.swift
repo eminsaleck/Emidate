@@ -10,6 +10,8 @@ import UIKit
 class ChatCell: UICollectionViewListCell {
     
     static var reuseId: String = "chatCell"
+
+    var isNew: Bool?
     
     let imageView = UIImageView()
     let name = UILabel()
@@ -26,6 +28,9 @@ class ChatCell: UICollectionViewListCell {
         setupConstraints()
         self.backgroundColor = UIColor.chatColor
        
+        
+            
+        
     }
     
     func setupElements() {
@@ -40,6 +45,8 @@ class ChatCell: UICollectionViewListCell {
         timeLabel.text = chat.time
         lastMessage.text = chat.lastMessage
         imageView.image = UIImage(named: chat.image)
+        isNew = Bool(chat.isNew)!
+        notification()
         
     }
     func setupFont(){
@@ -54,8 +61,15 @@ class ChatCell: UICollectionViewListCell {
 }
 
 extension ChatCell {
+    func notification(){
+        if isNew ?? false {
+        contentView.layer.addSublayer(createLayer())
+        }
+    }
     
     func createLayer() -> CAShapeLayer{
+        contentView.backgroundColor = #colorLiteral(red: 0.8182724118, green: 1, blue: 0.9826992154, alpha: 0.3959130527)
+        contentView.layer.zPosition = 1
         
         let notificationLayer = CAShapeLayer()
         notificationLayer.path = UIBezierPath(roundedRect: CGRect(x: 320, y: 35, width: 10, height: 10), cornerRadius: 5).cgPath
@@ -83,7 +97,10 @@ extension ChatCell {
         imageView.layer.masksToBounds = true
         imageView.layer.cornerRadius = 31
         
-        contentView.layer.addSublayer(createLayer())
+        imageView.layer.zPosition = 2
+        lastMessage.layer.zPosition = 2
+        timeLabel.layer.zPosition = 2
+        name.layer.zPosition = 2
         
         addSubview(imageView)
         addSubview(name)

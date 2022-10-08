@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC3BB78228F15EC4004C343D /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3BB78128F15EC4004C343D /* ProfileCell.swift */; };
+		AC3BB78428F15F18004C343D /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3BB78328F15F18004C343D /* SettingsCell.swift */; };
+		AC3BB78628F15F24004C343D /* SocialsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3BB78528F15F24004C343D /* SocialsCell.swift */; };
+		AC3BB78A28F15FAD004C343D /* HeaderForProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3BB78928F15FAD004C343D /* HeaderForProfile.swift */; };
+		AC3BB79428F16D7E004C343D /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3BB79328F16D7E004C343D /* PhotoCell.swift */; };
+		AC3BB79828F18627004C343D /* modelProfile.json in Resources */ = {isa = PBXBuildFile; fileRef = AC3BB79728F18627004C343D /* modelProfile.json */; };
 		AC5069A628EFF4F900DA137D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069A528EFF4F900DA137D /* TabBarController.swift */; };
 		AC5069A928EFF56900DA137D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069A828EFF56900DA137D /* UIColorExtension.swift */; };
 		AC5069AB28EFF5FA00DA137D /* TopAcountsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069AA28EFF5FA00DA137D /* TopAcountsController.swift */; };
@@ -24,7 +30,6 @@
 		AC5069E028F039F000DA137D /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069DF28F039F000DA137D /* ChatCell.swift */; };
 		AC5069E528F04ED500DA137D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069E428F04ED500DA137D /* HeaderView.swift */; };
 		AC5069EB28F0698100DA137D /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069EA28F0698100DA137D /* Profile.swift */; };
-		AC5069EF28F06A2100DA137D /* modelForProfile.json in Sources */ = {isa = PBXBuildFile; fileRef = AC5069EE28F06A2100DA137D /* modelForProfile.json */; };
 		AC5069F228F074AF00DA137D /* ProfileSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069F128F074AF00DA137D /* ProfileSection.swift */; };
 		AC5069F728F0758000DA137D /* Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5069F628F0758000DA137D /* Screen.png */; };
 		ACB31A9428EB1FFB001DC999 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB31A9328EB1FFB001DC999 /* AppDelegate.swift */; };
@@ -55,6 +60,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC3BB78128F15EC4004C343D /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		AC3BB78328F15F18004C343D /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		AC3BB78528F15F24004C343D /* SocialsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialsCell.swift; sourceTree = "<group>"; };
+		AC3BB78928F15FAD004C343D /* HeaderForProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderForProfile.swift; sourceTree = "<group>"; };
+		AC3BB79328F16D7E004C343D /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		AC3BB79728F18627004C343D /* modelProfile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = modelProfile.json; sourceTree = "<group>"; };
 		AC5069A528EFF4F900DA137D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		AC5069A828EFF56900DA137D /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Emidate/Extensions/UIColorExtension.swift; sourceTree = SOURCE_ROOT; };
 		AC5069AA28EFF5FA00DA137D /* TopAcountsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAcountsController.swift; sourceTree = "<group>"; };
@@ -71,7 +82,6 @@
 		AC5069DF28F039F000DA137D /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		AC5069E428F04ED500DA137D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		AC5069EA28F0698100DA137D /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		AC5069EE28F06A2100DA137D /* modelForProfile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = modelForProfile.json; sourceTree = "<group>"; };
 		AC5069F128F074AF00DA137D /* ProfileSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSection.swift; sourceTree = "<group>"; };
 		AC5069F628F0758000DA137D /* Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen.png; sourceTree = "<group>"; };
 		ACB31A9028EB1FFB001DC999 /* Emidate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emidate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +123,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC3BB78728F15F73004C343D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AC3BB78128F15EC4004C343D /* ProfileCell.swift */,
+				AC3BB79328F16D7E004C343D /* PhotoCell.swift */,
+				AC3BB78328F15F18004C343D /* SettingsCell.swift */,
+				AC3BB78528F15F24004C343D /* SocialsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		AC5069A728EFF52D00DA137D /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,7 +294,7 @@
 				ACB31A9C28EB1FFC001DC999 /* Assets.xcassets */,
 				ACB31A9E28EB1FFC001DC999 /* LaunchScreen.storyboard */,
 				AC5069D728F015D500DA137D /* model.json */,
-				AC5069EE28F06A2100DA137D /* modelForProfile.json */,
+				AC3BB79728F18627004C343D /* modelProfile.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -299,6 +320,8 @@
 		AC5069E928F0697100DA137D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AC3BB78728F15F73004C343D /* Cells */,
+				AC3BB78928F15FAD004C343D /* HeaderForProfile.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -470,6 +493,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC3BB79828F18627004C343D /* modelProfile.json in Resources */,
 				AC5069D928F01BC600DA137D /* model.json in Resources */,
 				AC5069F728F0758000DA137D /* Screen.png in Resources */,
 				ACB31AA028EB1FFC001DC999 /* LaunchScreen.storyboard in Resources */,
@@ -498,10 +522,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC3BB78428F15F18004C343D /* SettingsCell.swift in Sources */,
 				AC5069D828F015D500DA137D /* model.json in Sources */,
 				AC5069E528F04ED500DA137D /* HeaderView.swift in Sources */,
 				AC5069DE28F039D100DA137D /* MatchesCell.swift in Sources */,
+				AC3BB78228F15EC4004C343D /* ProfileCell.swift in Sources */,
 				AC5069D328F0149500DA137D /* Chat.swift in Sources */,
+				AC3BB79428F16D7E004C343D /* PhotoCell.swift in Sources */,
 				AC5069E028F039F000DA137D /* ChatCell.swift in Sources */,
 				ACB31A9828EB1FFB001DC999 /* FeedController.swift in Sources */,
 				AC5069AF28EFF63700DA137D /* MainController.swift in Sources */,
@@ -512,10 +539,11 @@
 				AC5069AB28EFF5FA00DA137D /* TopAcountsController.swift in Sources */,
 				AC5069B328EFF67800DA137D /* AccountController.swift in Sources */,
 				AC5069A628EFF4F900DA137D /* TabBarController.swift in Sources */,
-				AC5069EF28F06A2100DA137D /* modelForProfile.json in Sources */,
 				AC5069B528EFF8E000DA137D /* TabItem.swift in Sources */,
+				AC3BB78628F15F24004C343D /* SocialsCell.swift in Sources */,
 				AC5069EB28F0698100DA137D /* Profile.swift in Sources */,
 				AC5069D128F0146600DA137D /* Section.swift in Sources */,
+				AC3BB78A28F15FAD004C343D /* HeaderForProfile.swift in Sources */,
 				ACB31A9628EB1FFB001DC999 /* SceneDelegate.swift in Sources */,
 				AC5069B728EFFA9C00DA137D /* TabMenu.swift in Sources */,
 				AC5069D628F014F300DA137D /* Bundle + Extension.swift in Sources */,
