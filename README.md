@@ -1,5 +1,5 @@
 # Emidate
-Emidate App - Mobile Dating App (UI in progress, no business logic yet)
+Emidate App - Mobile Dating App (Only UI in progress)
 
 
 ![af asf](https://github.com/lemin07/Emidate/blob/main/Screen/Screen0.png?raw=true) 
