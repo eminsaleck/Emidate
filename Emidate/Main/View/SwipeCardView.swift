@@ -61,88 +61,6 @@ class SwipeCardView : UIView {
     //MARK: - Configuration
     
   
-    func configureButtonsContainer(){
-        addSubview(buttonsContainer)
-        buttonsContainer.layer.zPosition = 1000
-        buttonsContainer.delegate = self
-        buttonsContainer.clipsToBounds = true
-        buttonsContainer.layer.cornerRadius = 10
-        buttonsContainer.backgroundColor = #colorLiteral(red: 0.4566403031, green: 0.8707435131, blue: 0.7716047168, alpha: 1)
-        NSLayoutConstraint.activate([
-            buttonsContainer.bottomAnchor.constraint(equalTo: swipeView.bottomAnchor, constant: -10),
-            buttonsContainer.leadingAnchor.constraint(equalTo: swipeView.leadingAnchor, constant: 10),
-            buttonsContainer.trailingAnchor.constraint(equalTo: swipeView.trailingAnchor, constant: -10),
-            buttonsContainer.topAnchor.constraint(equalTo: viewForButtons.topAnchor)
-        ])
-    }
-    
-    func configureBottomCardView(){
-        addSubview(bottomCardView)
-        
-        bottomCardView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            bottomCardView.bottomAnchor.constraint(equalTo: bottomAnchor, constant:  -60),
-            bottomCardView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            bottomCardView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            bottomCardView.topAnchor.constraint(equalTo: topAnchor, constant: 450)
-        ])
-        
-    }
-    
-    func configureShadowView() {
-        shadowView = UIView()
-        shadowView.backgroundColor = .clear
-        shadowView.layer.shadowColor = UIColor.black.cgColor
-        shadowView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        shadowView.layer.shadowOpacity = 0.8
-        shadowView.layer.shadowRadius = 4.0
-        addSubview(shadowView)
-        
-        shadowView.translatesAutoresizingMaskIntoConstraints = false
-        shadowView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        shadowView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        shadowView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        shadowView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-    }
-    
-    func configureSwipeView() {
-        swipeView = UIView()
-        swipeView.layer.cornerRadius = 15
-        swipeView.clipsToBounds = true
-        shadowView.addSubview(swipeView)
-        
-        swipeView.translatesAutoresizingMaskIntoConstraints = false
-        swipeView.leftAnchor.constraint(equalTo: shadowView.leftAnchor).isActive = true
-        swipeView.rightAnchor.constraint(equalTo: shadowView.rightAnchor).isActive = true
-        swipeView.bottomAnchor.constraint(equalTo: shadowView.bottomAnchor).isActive = true
-        swipeView.topAnchor.constraint(equalTo: shadowView.topAnchor).isActive = true
-    }
-    
-    func configureViewForButtonsView() {  //-------------------
-        swipeView.addSubview(viewForButtons)
-       // label.backgroundColor = .clear
-
-        viewForButtons.translatesAutoresizingMaskIntoConstraints = false
-        viewForButtons.leftAnchor.constraint(equalTo: swipeView.leftAnchor).isActive = true
-        viewForButtons.rightAnchor.constraint(equalTo: swipeView.rightAnchor).isActive = true
-        viewForButtons.bottomAnchor.constraint(equalTo: swipeView.bottomAnchor).isActive = true
-        viewForButtons.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        
-    }
-    
-    func configureImageView() {
-        imageView = UIImageView()
-        swipeView.addSubview(imageView)
-        imageView.contentMode = .scaleAspectFill
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([ imageView.bottomAnchor.constraint(equalTo: viewForButtons.topAnchor),
-                                      imageView.trailingAnchor.constraint(equalTo: swipeView.trailingAnchor),
-                                      imageView.topAnchor.constraint(equalTo: swipeView.topAnchor),
-                                      imageView.leadingAnchor.constraint(equalTo: swipeView.leadingAnchor)])
-       
-    }
-    
  
     
     func configureTapGesture() {
@@ -224,4 +142,89 @@ extension SwipeCardView: ButtonsDelegate{
 
 }
 
+// Configuration
+extension SwipeCardView{
+    
+      func configureButtonsContainer(){
+          addSubview(buttonsContainer)
+          buttonsContainer.layer.zPosition = 1000
+          buttonsContainer.delegate = self
+          buttonsContainer.clipsToBounds = true
+          buttonsContainer.layer.cornerRadius = 10
+          buttonsContainer.backgroundColor = #colorLiteral(red: 0.4566403031, green: 0.8707435131, blue: 0.7716047168, alpha: 1)
+          NSLayoutConstraint.activate([
+              buttonsContainer.bottomAnchor.constraint(equalTo: swipeView.bottomAnchor, constant: -10),
+              buttonsContainer.leadingAnchor.constraint(equalTo: swipeView.leadingAnchor, constant: 10),
+              buttonsContainer.trailingAnchor.constraint(equalTo: swipeView.trailingAnchor, constant: -10),
+              buttonsContainer.topAnchor.constraint(equalTo: viewForButtons.topAnchor)
+          ])
+      }
+      
+      func configureBottomCardView(){
+          addSubview(bottomCardView)
+          
+          bottomCardView.translatesAutoresizingMaskIntoConstraints = false
+          NSLayoutConstraint.activate([
+              bottomCardView.bottomAnchor.constraint(equalTo: bottomAnchor, constant:  -60),
+              bottomCardView.leadingAnchor.constraint(equalTo: leadingAnchor),
+              bottomCardView.trailingAnchor.constraint(equalTo: trailingAnchor),
+              bottomCardView.topAnchor.constraint(equalTo: topAnchor, constant: 450)
+          ])
+          
+      }
+      
+      func configureShadowView() {
+          shadowView = UIView()
+          shadowView.backgroundColor = .clear
+          shadowView.layer.shadowColor = UIColor.black.cgColor
+          shadowView.layer.shadowOffset = CGSize(width: 0, height: 0)
+          shadowView.layer.shadowOpacity = 0.8
+          shadowView.layer.shadowRadius = 4.0
+          addSubview(shadowView)
+          
+          shadowView.translatesAutoresizingMaskIntoConstraints = false
+          shadowView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+          shadowView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+          shadowView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+          shadowView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+      }
+      
+      func configureSwipeView() {
+          swipeView = UIView()
+          swipeView.layer.cornerRadius = 15
+          swipeView.clipsToBounds = true
+          shadowView.addSubview(swipeView)
+          
+          swipeView.translatesAutoresizingMaskIntoConstraints = false
+          swipeView.leftAnchor.constraint(equalTo: shadowView.leftAnchor).isActive = true
+          swipeView.rightAnchor.constraint(equalTo: shadowView.rightAnchor).isActive = true
+          swipeView.bottomAnchor.constraint(equalTo: shadowView.bottomAnchor).isActive = true
+          swipeView.topAnchor.constraint(equalTo: shadowView.topAnchor).isActive = true
+      }
+      
+      func configureViewForButtonsView() {  //-------------------
+          swipeView.addSubview(viewForButtons)
+         // label.backgroundColor = .clear
 
+          viewForButtons.translatesAutoresizingMaskIntoConstraints = false
+          viewForButtons.leftAnchor.constraint(equalTo: swipeView.leftAnchor).isActive = true
+          viewForButtons.rightAnchor.constraint(equalTo: swipeView.rightAnchor).isActive = true
+          viewForButtons.bottomAnchor.constraint(equalTo: swipeView.bottomAnchor).isActive = true
+          viewForButtons.heightAnchor.constraint(equalToConstant: 60).isActive = true
+          
+      }
+      
+      func configureImageView() {
+          imageView = UIImageView()
+          swipeView.addSubview(imageView)
+          imageView.contentMode = .scaleAspectFill
+          imageView.translatesAutoresizingMaskIntoConstraints = false
+          
+          NSLayoutConstraint.activate([ imageView.bottomAnchor.constraint(equalTo: viewForButtons.topAnchor),
+                                        imageView.trailingAnchor.constraint(equalTo: swipeView.trailingAnchor),
+                                        imageView.topAnchor.constraint(equalTo: swipeView.topAnchor),
+                                        imageView.leadingAnchor.constraint(equalTo: swipeView.leadingAnchor)])
+         
+      }
+      
+}
