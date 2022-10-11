@@ -40,7 +40,7 @@ class TabMenu: UIView {
         }
         self.setNeedsLayout()
         self.layoutIfNeeded()
-        self.activateTab(tab: 0)
+        self.activateTab(tab: 2)
     }
     
     private func createTabItem(item: TabItem) -> UIView {

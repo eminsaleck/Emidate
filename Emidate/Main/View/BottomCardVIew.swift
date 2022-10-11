@@ -1,13 +1,14 @@
 //
-//  ProfileView.swift
+//  BottomCardVIew.swift
 //  Emidate
 //
-//  Created by LEMIN DAHOVICH on 08.10.2022.
+//  Created by LEMIN DAHOVICH on 11.10.2022.
 //
 
 import UIKit
 
-class ProfileView: UIView {
+class BottomCardView: UIView {
+    
     var imageView = UIImageView()
     var name = UILabel()
     
@@ -24,15 +25,18 @@ class ProfileView: UIView {
     
     var locationImage = UIImageView()
 
+    let view: UIView = {
+        let view = UIView()
+        return view
+    }()
     
     override init(frame: CGRect) {
-        super.init(frame: frame)
+        super.init(frame: .zero)
         configure()
-
     }
     
-    required init?(coder: NSCoder) {
-        fatalError()
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func setup(_ item: Profile) {
@@ -44,32 +48,29 @@ class ProfileView: UIView {
         name.text = item.name
     }
     
-    func setupFont(){
-        name.font = UIFont.boldSystemFont(ofSize: 25)
-        matches.font = UIFont.monospacedSystemFont(ofSize: 16, weight: .light)
-        matchesCount.font = UIFont.boldSystemFont(ofSize: 22)
-        matches.font = UIFont.monospacedSystemFont(ofSize: 16, weight: .light)
-        likes.font =  UIFont.monospacedSystemFont(ofSize: 16, weight: .light)
-        likesCount.font = UIFont.boldSystemFont(ofSize: 22)
-        bio.font = UIFont.monospacedSystemFont(ofSize: 14, weight: .light)
-        bio.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-        location.font = UIFont.monospacedSystemFont(ofSize: 14, weight: .semibold)
-        location.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-    }
-    
     func configure(){
         
-        locationImage.image = UIImage(named: "location")
-        matches.text = "matches"
-        likes.text = "likes"
-        setupFont()
-        setupConstraints()
+       
+        
+        addSubview(view)
+        view.backgroundColor = .red
+        
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.masksToBounds = false
+
+        NSLayoutConstraint.activate([
+            view.bottomAnchor.constraint(equalTo: bottomAnchor),
+            view.leadingAnchor.constraint(equalTo: leadingAnchor),
+            view.trailingAnchor.constraint(equalTo: trailingAnchor),
+            view.topAnchor.constraint(equalTo: topAnchor)
+        ])
+        
     }
     
 }
 
 
-extension ProfileView {
+extension BottomCardView {
     func setupConstraints() {
         self.backgroundColor = #colorLiteral(red: 0.968627451, green: 0.9725490196, blue: 0.9921568627, alpha: 1)
         
@@ -159,5 +160,3 @@ extension ProfileView {
                                     ])
     }
 }
-
-
