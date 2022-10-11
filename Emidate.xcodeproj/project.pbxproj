@@ -313,6 +313,7 @@
 		AC5069D428F014D800DA137D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				AC84775528F5650500ED9131 /* SwipeCardDataSource.swift */,
 				AC5069A828EFF56900DA137D /* UIColorExtension.swift */,
 				AC5069D528F014F300DA137D /* Bundle + Extension.swift */,
 				ACFF979728F1F34A00C80FBE /* Anchor.swift */,
@@ -330,7 +331,6 @@
 				AC5069D728F015D500DA137D /* model.json */,
 				ACFF97C328F2062C00C80FBE /* modelPhoto.json */,
 				AC3BB79728F18627004C343D /* modelProfile.json */,
-				AC84775528F5650500ED9131 /* SwipeCardDataSource.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";

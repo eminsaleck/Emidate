@@ -24,11 +24,13 @@ extension Swipeable where Self: UIPanGestureRecognizer{
     
     func swipe(_ card: UIView, _ view: UIView, loveOrHate: Bool){
         
+      
         
         let point = self.translation(in: view)
         
         let centerOfParentContainer = CGPoint(x: view.frame.width / 2, y: view.frame.height / 2)
         card.center = CGPoint(x: centerOfParentContainer.x + point.x, y: centerOfParentContainer.y + point.y)
+        
         
         if loveOrHate {
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 1.0, options: []) {
@@ -60,8 +62,17 @@ extension Swipeable where Self: UIPanGestureRecognizer{
         let centerOfParentContainer = CGPoint(x: view.frame.width / 2, y: view.frame.height / 2)
         card.center = CGPoint(x: centerOfParentContainer.x + point.x, y: centerOfParentContainer.y + point.y)
         
+        guard let buttonsView = card.viewWithTag(1005) else {return}
+        let pointB = self.translation(in: buttonsView)
+
+        let centerOfButtons = CGPoint(x: 10 , y: 640)
+        buttonsView.center = CGPoint(x: centerOfButtons.x + pointB.x, y: centerOfButtons.y + pointB.y)
+        
+        
         switch self.state {
         case .ended:
+            buttonsView.transform = .identity
+
             if (card.center.x) > 330 {
                 swipe(card, view, loveOrHate: true)
                 return
@@ -74,6 +85,9 @@ extension Swipeable where Self: UIPanGestureRecognizer{
             let rotation = tan(point.x / (view.frame.width * 2.0))
             card.transform = CGAffineTransform(rotationAngle: rotation)
             
+            let rotationB = tan(point.x / ((view.frame.width  )))
+          buttonsView.transform = CGAffineTransform(rotationAngle: rotationB)
+
         default:
             break
         }

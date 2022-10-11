@@ -26,7 +26,7 @@ class SwipeCardView : UIView {
     let buttonsContainer: ButtonsView = {
         
         let view = ButtonsView()
-    
+        view.tag = 1005
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -162,11 +162,15 @@ class SwipeCardView : UIView {
     @objc func handlePanGesture(sender: UIPanGestureRecognizer){
         sender.swipeView(sender.view!)
         
-        
         let card = sender.view as! SwipeCardView
         
+      
+        
         switch sender.state {
+            
         case .ended:
+           
+           
             if (card.center.x) > 400 {
                 
                 delegate?.swipeDidEnd(on: card, loveOrHate: true)
