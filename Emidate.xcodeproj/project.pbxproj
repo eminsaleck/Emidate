@@ -31,7 +31,6 @@
 		AC5069EB28F0698100DA137D /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069EA28F0698100DA137D /* Profile.swift */; };
 		AC5069F228F074AF00DA137D /* ProfileSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5069F128F074AF00DA137D /* ProfileSection.swift */; };
 		AC84773C28F4321F00ED9131 /* SwipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84773B28F4321F00ED9131 /* SwipeCardView.swift */; };
-		AC84774B28F5640000ED9131 /* CardsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84774A28F5640000ED9131 /* CardsDataModel.swift */; };
 		AC84774E28F5641D00ED9131 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84774D28F5641D00ED9131 /* ButtonsView.swift */; };
 		AC84775028F5643400ED9131 /* ButtonsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84774F28F5643400ED9131 /* ButtonsFactory.swift */; };
 		AC84775228F5648C00ED9131 /* StackContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84775128F5648C00ED9131 /* StackContainerView.swift */; };
@@ -39,6 +38,7 @@
 		AC84775628F5650500ED9131 /* SwipeCardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84775528F5650500ED9131 /* SwipeCardDataSource.swift */; };
 		AC84775828F56E6300ED9131 /* BottomCardVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84775728F56E6300ED9131 /* BottomCardVIew.swift */; };
 		AC84775D28F57D4200ED9131 /* UIView + Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84775C28F57D4200ED9131 /* UIView + Shadows.swift */; };
+		AC84775F28F580BE00ED9131 /* CardsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC84775E28F580BE00ED9131 /* CardsDataModel.swift */; };
 		ACB31A9428EB1FFB001DC999 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB31A9328EB1FFB001DC999 /* AppDelegate.swift */; };
 		ACB31A9628EB1FFB001DC999 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB31A9528EB1FFB001DC999 /* SceneDelegate.swift */; };
 		ACB31A9828EB1FFB001DC999 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB31A9728EB1FFB001DC999 /* FeedController.swift */; };
@@ -98,7 +98,6 @@
 		AC5069EA28F0698100DA137D /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		AC5069F128F074AF00DA137D /* ProfileSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSection.swift; sourceTree = "<group>"; };
 		AC84773B28F4321F00ED9131 /* SwipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardView.swift; sourceTree = "<group>"; };
-		AC84774A28F5640000ED9131 /* CardsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsDataModel.swift; sourceTree = "<group>"; };
 		AC84774D28F5641D00ED9131 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		AC84774F28F5643400ED9131 /* ButtonsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsFactory.swift; sourceTree = "<group>"; };
 		AC84775128F5648C00ED9131 /* StackContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackContainerView.swift; sourceTree = "<group>"; };
@@ -106,6 +105,7 @@
 		AC84775528F5650500ED9131 /* SwipeCardDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardDataSource.swift; sourceTree = "<group>"; };
 		AC84775728F56E6300ED9131 /* BottomCardVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardVIew.swift; sourceTree = "<group>"; };
 		AC84775C28F57D4200ED9131 /* UIView + Shadows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Shadows.swift"; sourceTree = "<group>"; };
+		AC84775E28F580BE00ED9131 /* CardsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardsDataModel.swift; path = Emidate/Extensions/CardsDataModel.swift; sourceTree = SOURCE_ROOT; };
 		ACB31A9028EB1FFB001DC999 /* Emidate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emidate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB31A9328EB1FFB001DC999 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACB31A9528EB1FFB001DC999 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -387,7 +387,7 @@
 		AC84774928F563F600ED9131 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AC84774A28F5640000ED9131 /* CardsDataModel.swift */,
+				AC84775E28F580BE00ED9131 /* CardsDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -601,6 +601,7 @@
 				AC5069E528F04ED500DA137D /* HeaderView.swift in Sources */,
 				AC5069DE28F039D100DA137D /* MatchesCell.swift in Sources */,
 				ACFF97C428F2062C00C80FBE /* modelPhoto.json in Sources */,
+				AC84775F28F580BE00ED9131 /* CardsDataModel.swift in Sources */,
 				AC5069D328F0149500DA137D /* Chat.swift in Sources */,
 				AC3BB79428F16D7E004C343D /* PhotoCell.swift in Sources */,
 				AC5069E028F039F000DA137D /* ChatCell.swift in Sources */,
@@ -625,7 +626,6 @@
 				AC3BB78628F15F24004C343D /* SocialsCell.swift in Sources */,
 				AC5069EB28F0698100DA137D /* Profile.swift in Sources */,
 				AC5069D128F0146600DA137D /* Section.swift in Sources */,
-				AC84774B28F5640000ED9131 /* CardsDataModel.swift in Sources */,
 				AC3BB78A28F15FAD004C343D /* HeaderForProfile.swift in Sources */,
 				AC84775428F564CB00ED9131 /* UIPanGestureRecognizer+Swipeable.swift in Sources */,
 				ACB31A9628EB1FFB001DC999 /* SceneDelegate.swift in Sources */,
