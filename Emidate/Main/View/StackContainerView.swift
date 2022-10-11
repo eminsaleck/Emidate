@@ -19,7 +19,7 @@ class StackContainerView: UIView, SwipeCardsDelegate {
     var remainingcards: Int = 0
     var count = 0
     let horizontalInset: CGFloat = 10.0
-    let verticalInset: CGFloat = -18.0
+    let verticalInset: CGFloat = -10.0
     
     var visibleCards: [SwipeCardView] {
         return subviews as? [SwipeCardView] ?? []

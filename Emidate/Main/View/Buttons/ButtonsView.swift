@@ -13,28 +13,28 @@ class ButtonsView: UIView {
     weak var delegate: ButtonsDelegate?
     
     lazy var likeButton: UIButton = {
-        let b = ButtonFactory.buttonWithImage(image: #imageLiteral(resourceName: "location"), cornerRadius: 0, target: self, selector: #selector(like), sizeToFit: true).new
+        let b = ButtonFactory.buttonWithImage(image: #imageLiteral(resourceName: "back"), cornerRadius: 0, target: self, selector: #selector(like), sizeToFit: true).new
         
         return b
     }()
     
     lazy var passButton: UIButton = {
-        let b = ButtonFactory.buttonWithImage(image: #imageLiteral(resourceName: "location"), cornerRadius: 0, target: self, selector: #selector(pass), sizeToFit: true).new
+        let b = ButtonFactory.buttonWithImage(image: #imageLiteral(resourceName: "no"), cornerRadius: 0, target: self, selector: #selector(pass), sizeToFit: true).new
         return b
     }()
     
     lazy var superLikeButton: UIButton = {
-        let b = ButtonFactory.buttonWithImage(image: #imageLiteral(resourceName: "location"), cornerRadius: 0, target: self, selector: #selector(superLike), sizeToFit: true).new
+        let b = ButtonFactory.buttonWithImage(image: #imageLiteral(resourceName: "electricity"), cornerRadius: 0, target: self, selector: #selector(superLike), sizeToFit: true).new
         return b
     }()
     
     lazy var fourth: UIButton = {
-        let b = ButtonFactory.buttonWithImage(image: #imageLiteral(resourceName: "location"), cornerRadius: 0, target: self, selector: #selector(superLike), sizeToFit: true).new
+        let b = ButtonFactory.buttonWithImage(image: #imageLiteral(resourceName: "love"), cornerRadius: 0, target: self, selector: #selector(like), sizeToFit: true).new
         return b
     }()
     
     lazy var fifth: UIButton = {
-        let b = ButtonFactory.buttonWithImage(image: #imageLiteral(resourceName: "location"), cornerRadius: 0, target: self, selector: #selector(superLike), sizeToFit: true).new
+        let b = ButtonFactory.buttonWithImage(image: #imageLiteral(resourceName: "star"), cornerRadius: 0, target: self, selector: #selector(superLike), sizeToFit: true).new
         return b
     }()
     
@@ -68,10 +68,11 @@ class ButtonsView: UIView {
         addSubview(container)
         
         NSLayoutConstraint.activate([
-            container.leadingAnchor.constraint(equalTo: leadingAnchor),
-            container.topAnchor.constraint(equalTo: topAnchor),
-            container.widthAnchor.constraint(equalTo: widthAnchor),
-            container.heightAnchor.constraint(equalTo: heightAnchor)
+            container.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
+            container.topAnchor.constraint(equalTo: topAnchor, constant: 5),
+            container.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
+            container.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12)
+            
         ])
     }
 

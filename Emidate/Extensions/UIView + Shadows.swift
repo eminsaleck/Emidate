@@ -1,70 +1,50 @@
 
 import UIKit
 
-extension UIView {
-    func addShadow(to edges: [UIRectEdge], radius: CGFloat = 3.0, opacity: Float = 0.6, color: CGColor = UIColor.black.cgColor) {
+typealias GradientPoints = (startPoint: CGPoint, endPoint: CGPoint)
 
-        let fromColor = color
-        let toColor = UIColor.clear.cgColor
-        let viewFrame = self.frame
-        for edge in edges {
-            let gradientLayer = CAGradientLayer()
-            gradientLayer.colors = [fromColor, toColor]
-            gradientLayer.opacity = opacity
+enum GradientOrientation {
+  case topRightBottomLeft
+  case topLeftBottomRight
+  case horizontal
+  case vertical
 
-            switch edge {
-            case .top:
-                gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.0)
-                gradientLayer.endPoint = CGPoint(x: 0.5, y: 1.0)
-                gradientLayer.frame = CGRect(x: 0.0, y: 0.0, width: viewFrame.width, height: radius)
-            case .bottom:
-                gradientLayer.startPoint = CGPoint(x: 0.5, y: 1.0)
-                gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.0)
-                gradientLayer.frame = CGRect(x: 0.0, y: viewFrame.height - radius, width: viewFrame.width, height: radius)
-            case .left:
-                gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
-                gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
-                gradientLayer.frame = CGRect(x: 0.0, y: 0.0, width: radius, height: viewFrame.height)
-            case .right:
-                gradientLayer.startPoint = CGPoint(x: 1.0, y: 0.5)
-                gradientLayer.endPoint = CGPoint(x: 0.0, y: 0.5)
-                gradientLayer.frame = CGRect(x: viewFrame.width - radius, y: 0.0, width: radius, height: viewFrame.height)
-            default:
-                break
-            }
-            self.layer.addSublayer(gradientLayer)
-        }
+  var startPoint: CGPoint {
+    return points.startPoint
+  }
+
+  var endPoint: CGPoint {
+    return points.endPoint
+  }
+
+  var points: GradientPoints {
+    switch self {
+    case .topRightBottomLeft:
+      return (CGPoint(x: 0.0, y: 1.0), CGPoint(x: 1.0, y: 0.0))
+    case .topLeftBottomRight:
+      return (CGPoint(x: 0.0, y: 0.0), CGPoint(x: 1.0, y: 1.0))
+    case .horizontal:
+      return (CGPoint(x: 0.0, y: 0.0), CGPoint(x: 1.0, y: 0.0))
+    case .vertical:
+      return (CGPoint(x: 0.0, y: 0.0), CGPoint(x: 0.0, y: 1.0))
     }
-
-    func removeAllShadows() {
-        if let sublayers = self.layer.sublayers, !sublayers.isEmpty {
-            for sublayer in sublayers {
-                sublayer.removeFromSuperlayer()
-            }
-        }
-    }
+  }
 }
 
+
 extension UIView {
-    func addInnerShadow() {
-        let innerShadow = CALayer()
-        innerShadow.frame = bounds
-        
-        // Shadow path (1pt ring around bounds)
-        let radius = self.layer.cornerRadius
-        let path = UIBezierPath(roundedRect: innerShadow.bounds.insetBy(dx: 2, dy:2), cornerRadius:radius)
-        let cutout = UIBezierPath(roundedRect: innerShadow.bounds, cornerRadius:radius).reversing()
-        
-        path.append(cutout)
-        innerShadow.shadowPath = path.cgPath
-        innerShadow.masksToBounds = true
-        
-        // Shadow properties
-        innerShadow.shadowColor = UIColor.black.cgColor
-        innerShadow.shadowOffset = CGSize(width: 0, height: 0)
-        innerShadow.shadowOpacity = 0.5
-        innerShadow.shadowRadius = 2
-        innerShadow.cornerRadius = self.layer.cornerRadius
-        layer.addSublayer(innerShadow)
-    }
+  func applyGradient(with colors: [UIColor], gradientOrientation orientation: GradientOrientation) {
+    let gradient = CAGradientLayer()
+    gradient.frame = self.bounds
+    gradient.colors = colors.map { $0.cgColor }
+    gradient.startPoint = orientation.startPoint
+    gradient.endPoint = orientation.endPoint
+    gradient.borderColor = self.layer.borderColor
+    gradient.borderWidth = self.layer.borderWidth
+    gradient.cornerRadius = self.layer.cornerRadius
+    gradient.masksToBounds = true
+    gradient.isHidden = false
+
+    self.layer.insertSublayer(gradient, at: 0)
+  }
 }

@@ -122,7 +122,7 @@ class TabMenu: UIView {
         
         let contactRect = CGRect(x: -shadowSize + 10, y: 35 - (shadowSize * 0.99) + shadowDistance, width: borderWidth + shadowSize * 2, height: shadowSize)
         borderLayer.shadowPath = UIBezierPath(ovalIn: contactRect).cgPath
-        borderLayer.shadowRadius = 5
+        borderLayer.shadowRadius = 2
         borderLayer.shadowOpacity = 0.6
         
         DispatchQueue.main.async {

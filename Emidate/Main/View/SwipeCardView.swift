@@ -24,7 +24,9 @@ class SwipeCardView : UIView {
     let baseView = UIView()
     
     let buttonsContainer: ButtonsView = {
+        
         let view = ButtonsView()
+    
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -32,15 +34,13 @@ class SwipeCardView : UIView {
     
     var dataSource : CardsDataModel? {
         didSet {
-            swipeView.backgroundColor = dataSource?.bgColor
            // let item = dataSource?.item
           //  bottomCardView.setup(item)
             guard let image = dataSource?.image else { return }
             imageView.image = UIImage(named: image)
         }
     }
-    
-    
+
     //MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -59,15 +59,20 @@ class SwipeCardView : UIView {
     }
     
     //MARK: - Configuration
+    
+  
     func configureButtonsContainer(){
         addSubview(buttonsContainer)
         buttonsContainer.layer.zPosition = 1000
         buttonsContainer.delegate = self
+        buttonsContainer.clipsToBounds = true
+        buttonsContainer.layer.cornerRadius = 10
+        buttonsContainer.backgroundColor = #colorLiteral(red: 0.4566403031, green: 0.8707435131, blue: 0.7716047168, alpha: 1)
         NSLayoutConstraint.activate([
             buttonsContainer.bottomAnchor.constraint(equalTo: swipeView.bottomAnchor, constant: -10),
             buttonsContainer.leadingAnchor.constraint(equalTo: swipeView.leadingAnchor, constant: 10),
             buttonsContainer.trailingAnchor.constraint(equalTo: swipeView.trailingAnchor, constant: -10),
-            buttonsContainer.topAnchor.constraint(equalTo: viewForButtons.topAnchor, constant: 10)
+            buttonsContainer.topAnchor.constraint(equalTo: viewForButtons.topAnchor)
         ])
     }
     

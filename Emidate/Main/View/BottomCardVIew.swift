@@ -53,7 +53,7 @@ class BottomCardView: UIView {
        
         
         addSubview(view)
-        view.backgroundColor = .red
+        view.backgroundColor = .clear
         
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.masksToBounds = false

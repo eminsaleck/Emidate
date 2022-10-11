@@ -12,12 +12,12 @@ class MainController: UIViewController {
     
     
     //MARK: - Properties
-    var viewModelData = [CardsDataModel(bgColor: UIColor(red:0.96, green:0.81, blue:0.46, alpha:1.0), text: "Hamburger", image: "human1"),
-                         CardsDataModel(bgColor: UIColor(red:0.29, green:0.64, blue:0.96, alpha:1.0), text: "1", image: "2"),
-                         CardsDataModel(bgColor: UIColor(red:0.29, green:0.63, blue:0.49, alpha:1.0), text: "1", image: "2"),
-                         CardsDataModel(bgColor: UIColor(red:0.69, green:0.52, blue:0.38, alpha:1.0), text: "1", image: "3"),
-                         CardsDataModel(bgColor: UIColor(red:0.90, green:0.99, blue:0.97, alpha:1.0), text: "1", image: "4"),
-                         CardsDataModel(bgColor: UIColor(red:0.83, green:0.82, blue:0.69, alpha:1.0), text: "Robot", image: "1")]
+    var viewModelData = [CardsDataModel(image: "human1"),
+                         CardsDataModel(image: "2"),
+                         CardsDataModel(image: "2"),
+                         CardsDataModel(image: "3"),
+                         CardsDataModel(image: "4"),
+                         CardsDataModel(image: "1")]
     
     var stackContainer : StackContainerView!
     
@@ -33,6 +33,8 @@ class MainController: UIViewController {
         
         
         view = UIView()
+  
+        
         view.backgroundColor = UIColor.whiteApple
         stackContainer = StackContainerView()
         view.addSubview(stackContainer)
@@ -58,7 +60,7 @@ class MainController: UIViewController {
         stackContainer.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         stackContainer.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 75).isActive = true
         stackContainer.widthAnchor.constraint(equalToConstant: 350).isActive = true
-        stackContainer.heightAnchor.constraint(equalToConstant: 630).isActive = true
+        stackContainer.heightAnchor.constraint(equalToConstant: 670).isActive = true
     }
     
 }
