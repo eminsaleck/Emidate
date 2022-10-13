@@ -7,6 +7,9 @@ Emidate App - Mobile Dating App (Only UI)
 3. Lottie
 4. Alamofire
 
+
+![af asf](https://github.com/lemin07/Emidate/blob/main/Screen/gif1.gif?raw=true) | ![af asf](https://github.com/lemin07/Emidate/blob/main/Screen/gif2.gif?raw=true) | ![af asf](https://github.com/lemin07/Emidate/blob/main/Screen/gif3.gif?raw=true) 
+
+
 ![af asf](https://github.com/lemin07/Emidate/blob/main/Screen/Screen0.png?raw=true) 
 ![af asf](https://github.com/lemin07/Emidate/blob/main/Screen/Screen1.png?raw=true) 
-![af asf](https://github.com/lemin07/Emidate/blob/main/Screen/gif.gif?raw=true) 
