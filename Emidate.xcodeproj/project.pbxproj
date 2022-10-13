@@ -14,6 +14,7 @@
 		AC0B2E8C28F85C750045FAA0 /* gif1.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC0B2E8B28F85C750045FAA0 /* gif1.gif */; };
 		AC0B2E8E28F85D6E0045FAA0 /* gif2.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC0B2E8D28F85D6E0045FAA0 /* gif2.gif */; };
 		AC0B2E9028F85E440045FAA0 /* gif3.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC0B2E8F28F85E440045FAA0 /* gif3.gif */; };
+		AC0B2E9228F861250045FAA0 /* gif4.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC0B2E9128F861250045FAA0 /* gif4.gif */; };
 		AC3BB78428F15F18004C343D /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3BB78328F15F18004C343D /* SettingsCell.swift */; };
 		AC3BB78628F15F24004C343D /* SocialsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3BB78528F15F24004C343D /* SocialsCell.swift */; };
 		AC3BB78A28F15FAD004C343D /* HeaderForProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3BB78928F15FAD004C343D /* HeaderForProfile.swift */; };
@@ -84,6 +85,7 @@
 		AC0B2E8B28F85C750045FAA0 /* gif1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif1.gif; sourceTree = "<group>"; };
 		AC0B2E8D28F85D6E0045FAA0 /* gif2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif2.gif; sourceTree = "<group>"; };
 		AC0B2E8F28F85E440045FAA0 /* gif3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif3.gif; sourceTree = "<group>"; };
+		AC0B2E9128F861250045FAA0 /* gif4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif4.gif; sourceTree = "<group>"; };
 		AC3BB78328F15F18004C343D /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		AC3BB78528F15F24004C343D /* SocialsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialsCell.swift; sourceTree = "<group>"; };
 		AC3BB78928F15FAD004C343D /* HeaderForProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderForProfile.swift; sourceTree = "<group>"; };
@@ -377,6 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				AC0B2E8F28F85E440045FAA0 /* gif3.gif */,
+				AC0B2E9128F861250045FAA0 /* gif4.gif */,
 				AC0B2E8D28F85D6E0045FAA0 /* gif2.gif */,
 				AC0B2E8B28F85C750045FAA0 /* gif1.gif */,
 				ACCE256228F21552007A08EC /* Screen0.png */,
@@ -584,6 +587,7 @@
 				AC3BB79828F18627004C343D /* modelProfile.json in Resources */,
 				AC0B2E9028F85E440045FAA0 /* gif3.gif in Resources */,
 				AC5069D928F01BC600DA137D /* model.json in Resources */,
+				AC0B2E9228F861250045FAA0 /* gif4.gif in Resources */,
 				ACCE256328F21552007A08EC /* Screen0.png in Resources */,
 				ACB31AA028EB1FFC001DC999 /* LaunchScreen.storyboard in Resources */,
 				AC0B2E8C28F85C750045FAA0 /* gif1.gif in Resources */,

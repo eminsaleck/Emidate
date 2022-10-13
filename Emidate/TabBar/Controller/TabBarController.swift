@@ -10,6 +10,12 @@ class TabBarController: UITabBarController {
     
     var customTabBar: TabMenu!
     var tabBarHeight: CGFloat = 50.0
+    var viewWhite: UIView = {
+       let view = UIView()
+        view.backgroundColor = .whiteApple
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +46,14 @@ class TabBarController: UITabBarController {
         self.customTabBar.itemTapped = self.changeTab
 
         self.view.addSubview(customTabBar)
+        self.view.addSubview(viewWhite)
+
 
         NSLayoutConstraint.activate([
+            viewWhite.bottomAnchor.constraint(equalTo: customTabBar.topAnchor),
+            viewWhite.topAnchor.constraint(equalTo: view.topAnchor),
+            viewWhite.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            viewWhite.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             self.customTabBar.leadingAnchor.constraint(equalTo: tabBar.leadingAnchor, constant: 7),
             self.customTabBar.trailingAnchor.constraint(equalTo: tabBar.trailingAnchor),
             self.customTabBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5),
