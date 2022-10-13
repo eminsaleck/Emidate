@@ -6,41 +6,31 @@
 //
 
 import UIKit
+import Alamofire
+
+let apiKey = "VuXOyYkiBeutJaPRBwVj_g"
+
 
 class MainController: UIViewController {
- 
-    
-    
-    //MARK: - Properties
-    var viewModelData = [CardsDataModel(image: "human1"),
-                         CardsDataModel(image: "2"),
-                         CardsDataModel(image: "2"),
-                         CardsDataModel(image: "3"),
-                         CardsDataModel(image: "4"),
-                         CardsDataModel(image: "1")]
+
+    var viewModelData: [CardsDataModel] = []
     
     var stackContainer : StackContainerView!
+    
     
     let buttonsContainer: ButtonsView = {
         let view = ButtonsView()
         
         return view
     }()
-    
-    //MARK: - Init
+
     
     override func loadView() {
-        
-        
         view = UIView()
-  
-        
         view.backgroundColor = UIColor.whiteApple
         stackContainer = StackContainerView()
         view.addSubview(stackContainer)
-        
         configureStackContainer()
-        
         stackContainer.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -48,12 +38,9 @@ class MainController: UIViewController {
         super.viewDidLoad()
         title = "Expense Tracker"
         stackContainer.dataSource = self
-        
-        
+        print(viewModelData)
+        fetchData()
     }
-    
-    
-    //MARK: - Configurations
 
     func configureStackContainer() {
         
@@ -73,6 +60,7 @@ extension MainController : SwipeCardsDataSource {
     
     func card(at index: Int) -> SwipeCardView {
         let card = SwipeCardView()
+        card.bottomCardView.setup(viewModelData[index])
         card.dataSource = viewModelData[index]
         return card
     }
@@ -85,3 +73,23 @@ extension MainController : SwipeCardsDataSource {
     
     
 }
+
+extension MainController{
+    func fetchData(){
+        let parameters = Parameter()
+     
+        
+        AF.request("https://app.fakejson.com/q", method: .post, parameters: parameters).responseJSON { response in
+            do{
+            let result: CardsDataModel = try JSONDecoder().decode(CardsDataModel.self, from: response.data!)
+                print(result)
+                self.viewModelData = result.results
+                
+            }
+            catch{
+                print("Failed")
+            }
+               }
+    }
+}
+

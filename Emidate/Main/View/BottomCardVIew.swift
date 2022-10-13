@@ -100,9 +100,7 @@ class BottomCardView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup(_ item: Profile) {
-        
-    }
+
     func exampleInfo(){
         nameLabel.text = "Maria Graham"
         workLabel.text = "Tatto artist"
@@ -114,6 +112,14 @@ class BottomCardView: UIView {
 
 
 extension BottomCardView {
+    func setup(_ data: CardsDataModel){
+        nameLabel.text = data.name
+        workLabel.text = data.work
+        homeLabel.text = data.home
+        bookLabel.text = data.book
+        locationLabel.text = data.location
+    }
+    
     func configure(){
         
         addSubview(view)
