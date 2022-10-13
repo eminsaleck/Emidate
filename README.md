@@ -8,7 +8,7 @@ Emidate App - Mobile Dating App (Only UI)
 4. Alamofire
 
 
-![af asf](https://github.com/lemin07/Emidate/blob/main/Screen/gif1.gif?raw=true) | ![af asf](https://github.com/lemin07/Emidate/blob/main/Screen/gif2.gif?raw=true) | ![af asf](https://github.com/lemin07/Emidate/blob/main/Screen/gif4.gif?raw=true) 
+>1 ![af asf](https://github.com/lemin07/Emidate/blob/main/Screen/gif1.gif?raw=true) | ![af asf](https://github.com/lemin07/Emidate/blob/main/Screen/gif2.gif?raw=true) | ![af asf](https://github.com/lemin07/Emidate/blob/main/Screen/gif4.gif?raw=true) 
 
 
 ![af asf](https://github.com/lemin07/Emidate/blob/main/Screen/Screen0.png?raw=true) 
