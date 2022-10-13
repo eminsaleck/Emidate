@@ -145,8 +145,6 @@ extension BottomCardView {
         addSubview(locationLabel)
         addSubview(locationImageView)
 
-
-        
         NSLayoutConstraint.activate([
             nameLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 15),
             nameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),

@@ -32,20 +32,5 @@ enum GradientOrientation {
 }
 
 
-extension UIView {
-  func applyGradient(with colors: [UIColor], gradientOrientation orientation: GradientOrientation) {
-    let gradient = CAGradientLayer()
-    gradient.frame = self.bounds
-    gradient.colors = colors.map { $0.cgColor }
-    gradient.startPoint = orientation.startPoint
-    gradient.endPoint = orientation.endPoint
-    gradient.borderColor = self.layer.borderColor
-    gradient.borderWidth = self.layer.borderWidth
-    gradient.cornerRadius = self.layer.cornerRadius
-    gradient.masksToBounds = true
-    gradient.isHidden = false
 
-    self.layer.insertSublayer(gradient, at: 0)
-  }
-}
 
