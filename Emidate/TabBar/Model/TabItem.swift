@@ -34,7 +34,6 @@ enum TabItem: String, CaseIterable {
         switch self {
         case .feed:
             return UIImage(named: "feed")!
-            
         case .topAccount:
             return UIImage(named: "topAccount")!
         case .main:
