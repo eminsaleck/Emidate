@@ -161,10 +161,5 @@ extension PhotoViewController {
                 self.collectionView.reloadData()
 
             }
-        
-
     }
-    
-    
-    
 }
