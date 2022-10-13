@@ -22,8 +22,8 @@ class AccountController: UIViewController {
     }()
     
     
-    lazy var photoView: PhotoView = {
-        let tv = PhotoView()
+    lazy var photoView: PhotoViewController = {
+        let tv = PhotoViewController()
         tv.translatesAutoresizingMaskIntoConstraints = false
         return tv
     }()

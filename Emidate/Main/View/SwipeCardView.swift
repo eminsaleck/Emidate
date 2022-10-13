@@ -155,7 +155,8 @@ extension SwipeCardView{
           NSLayoutConstraint.activate([
               buttonsContainer.bottomAnchor.constraint(equalTo: swipeView.bottomAnchor, constant: -10),
               buttonsContainer.leadingAnchor.constraint(equalTo: swipeView.leadingAnchor, constant: 22),
-              buttonsContainer.trailingAnchor.constraint(equalTo: swipeView.trailingAnchor, constant: -22),
+              buttonsContainer.trailingAnchor.constraint(equalTo: swipeView.trailingAnchor, constant: -22
+                                                        ),
               buttonsContainer.topAnchor.constraint(equalTo: viewForButtons.topAnchor)
           ])
       }

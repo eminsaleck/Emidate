@@ -13,5 +13,6 @@ import UIKit
 struct Section: Decodable, Hashable {
     let type: String
     let title: String
-    let items: [Chat]
+    var items: [Chat]
+
 }
