@@ -154,8 +154,8 @@ extension SwipeCardView{
           buttonsContainer.backgroundColor = #colorLiteral(red: 0.4566403031, green: 0.8707435131, blue: 0.7716047168, alpha: 1)
           NSLayoutConstraint.activate([
               buttonsContainer.bottomAnchor.constraint(equalTo: swipeView.bottomAnchor, constant: -10),
-              buttonsContainer.leadingAnchor.constraint(equalTo: swipeView.leadingAnchor, constant: 10),
-              buttonsContainer.trailingAnchor.constraint(equalTo: swipeView.trailingAnchor, constant: -10),
+              buttonsContainer.leadingAnchor.constraint(equalTo: swipeView.leadingAnchor, constant: 22),
+              buttonsContainer.trailingAnchor.constraint(equalTo: swipeView.trailingAnchor, constant: -22),
               buttonsContainer.topAnchor.constraint(equalTo: viewForButtons.topAnchor)
           ])
       }
