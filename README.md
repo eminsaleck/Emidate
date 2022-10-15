@@ -1,13 +1,12 @@
 # Emidate
-Emidate App - Mobile Dating App (UI + Full functioning chat)
+Emidate App - Mobile Dating App (only UI)
 
 
 # Technologies: 
 >1. UIKit
 >2. JSON
 >3. Alamofire
->4. Firebase 
->5. MVC
+>4. MVC
 
 ![af asf](https://github.com/lemin07/Emidate/blob/main/Screen/gif1.gif?raw=true) | ![af asf](https://github.com/lemin07/Emidate/blob/main/Screen/gif2.gif?raw=true) | ![af asf](https://github.com/lemin07/Emidate/blob/main/Screen/gif4.gif?raw=true) 
 
