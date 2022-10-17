@@ -1,7 +1,6 @@
 # Emidate
 Emidate App - Mobile Dating App (only UI)
 
-
 # Technologies: 
 >1. UIKit
 >2. JSON
