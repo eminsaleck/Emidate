@@ -16,6 +16,7 @@ class SwipeCardView : UIView {
     
     var viewForButtons = UIView()
     
+    
     var bottomCardView = BottomCardView()
     
     var delegate : SwipeCardsDelegate?
